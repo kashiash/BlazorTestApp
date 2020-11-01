@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace KodyPocztowe.Module.BusinessObjects
+namespace KrajeWaluty.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [XafDefaultProperty(nameof(NazwaGminy))]

@@ -27,6 +27,7 @@
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="20.2.3" />
     <PackageReference Include="DevExpress.Persistent.Base" Version="20.2.3" />
     <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="20.2.3" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonLibrary\CommonLibrary.csproj" />

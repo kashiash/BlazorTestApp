@@ -3,14 +3,14 @@ using DevExpress.Data.Filtering;
 using DevExpress.Xpo;
 
 using kashiash.utils;
-using KodyPocztowe.Module.BusinessObjects;
+using KrajeWaluty.Module.BusinessObjects;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
 
-namespace KodyPocztowe.Module.Imports
+namespace KrajeWaluty.Module.Imports
 {
 
 

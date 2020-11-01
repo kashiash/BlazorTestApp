@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace KodyPocztowe.Module.BusinessObjects
+namespace KrajeWaluty.Module.BusinessObjects
 {
     public class KursWaluty : XPObject
     {

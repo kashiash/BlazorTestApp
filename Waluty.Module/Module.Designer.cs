@@ -1,5 +1,5 @@
-﻿namespace KrajeWaluty.Module {
-	partial class KodyPocztoweModule {
+﻿namespace KrajeWaluty {
+	partial class KrajeWalutyModule {
 		/// <summary> 
 		/// Required designer variable.
 		/// </summary>
@@ -24,7 +24,7 @@
 		/// </summary>
 		private void InitializeComponent() {
 			// 
-			// KodyPocztoweModule
+			// WalutyModule
 			// 
 			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.SystemModule.SystemModule));
 			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Objects.BusinessClassLibraryCustomizationModule));

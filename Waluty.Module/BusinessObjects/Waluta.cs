@@ -7,17 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KodyPocztowe.Module.BusinessObjects
+namespace KrajeWaluty.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [DefaultProperty(nameof(Symbol))]
     [NavigationItem("Administracyjne")]
-    public class Kraj : XPCustomObject
+    public class Waluta : XPCustomObject
 	{
-		public Kraj(Session session) : base(session)
+		public Waluta(Session session) : base(session)
 		{ }
 
-        
+
+        Kraj kraj;
+        string symbol;
+        string nazwa;
+
+
         [Size(3)]
         [Key]
         public string Symbol
@@ -26,19 +31,18 @@ namespace KodyPocztowe.Module.BusinessObjects
             set => SetPropertyValue(nameof(Symbol), ref symbol, value);
         }
 
-        bool isMetric;
-        Waluta waluta;
-        int geoId;
-        string symbol;
-        string nazwa;
-
-
 
         [Size(SizeAttribute.DefaultStringMappingFieldSize)]
         public string Nazwa
         {
             get => nazwa;
             set => SetPropertyValue(nameof(Nazwa), ref nazwa, value);
+        }
+
+        public Kraj Kraj
+        {
+            get => kraj;
+            set => SetPropertyValue(nameof(Kraj), ref kraj, value);
         }
 
         string lokalnaNazwa;
@@ -57,23 +61,13 @@ namespace KodyPocztowe.Module.BusinessObjects
             set => SetPropertyValue(nameof(LokalnaNazwa), ref lokalnaNazwa, value);
         }
 
-        public int GeoId
+        [Association("Waluta-KursyWalut")]
+        public XPCollection<KursWaluty> KursyWalut
         {
-            get => geoId;
-            set => SetPropertyValue(nameof(GeoId), ref geoId, value);
-        }
-
-
-        public Waluta Waluta
-        {
-            get => waluta;
-            set => SetPropertyValue(nameof(Waluta), ref waluta, value);
-        }
-        
-        public bool IsMetric
-        {
-            get => isMetric;
-            set => SetPropertyValue(nameof(IsMetric), ref isMetric, value);
+            get
+            {
+                return GetCollection<KursWaluty>(nameof(KursyWalut));
+            }
         }
     }
 }

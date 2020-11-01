@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CommonLibrary\CommonLibrary.csproj" />
     <ProjectReference Include="..\KodyPocztowe.Module\KodyPocztowe.Module.csproj" />
+    <ProjectReference Include="..\Waluty.Module\WalutyModule.csproj" />
   </ItemGroup>
 
 </Project>

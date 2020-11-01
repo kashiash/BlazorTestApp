@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using AggregatedAttribute = DevExpress.Xpo.AggregatedAttribute;
 
-namespace KodyPocztowe.Module.BusinessObjects
+namespace KrajeWaluty.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [XafDefaultProperty(nameof(NazwaPowiatu))]

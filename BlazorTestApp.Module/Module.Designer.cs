@@ -1,4 +1,5 @@
-﻿using KodyPocztowe.Module;
+﻿using KrajeWaluty;
+using KrajeWaluty.Module;
 
 namespace BlazorTestApp.Module {
 	partial class BlazorTestAppModule {
@@ -44,6 +45,7 @@ namespace BlazorTestApp.Module {
 			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule));
 
 			this.RequiredModuleTypes.Add(typeof(KodyPocztoweModule));
+			this.RequiredModuleTypes.Add(typeof(KrajeWalutyModule));
 		}
 
 		#endregion

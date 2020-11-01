@@ -1,32 +1,30 @@
-﻿using DevExpress.Data.Filtering;
+﻿using Common.Module.Utils;
+using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Utils;
+using DevExpress.ExpressApp.Xpo;
+using KrajeWaluty.Module.BusinessObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace KodyPocztowe.Module.BusinessObjects
+namespace KrajeWaluty.Module.Utils
 {
-    public class WalutyReader
+    public class WalutyHelper
 
     {
-        private IObjectSpace directObjectSpace;
 
-        public WalutyReader(IObjectSpace directObjectSpace)
-        {
-            this.directObjectSpace = directObjectSpace;
-        }
 
-        public void WczytajNotowania(List<Notowanie> notowania)
+        private static void WczytajKursy(IObjectSpace directObjectSpace,List<Notowanie> notowania)
         {
             foreach (var notowanie in notowania)
             {
-                WczytajNotowanie(notowanie);
+                WczytajNotowanie(directObjectSpace,notowanie);
 
             }
         }
 
-        private void WczytajNotowanie(Notowanie notowanie)
+        private static void WczytajNotowanie(IObjectSpace directObjectSpace,Notowanie notowanie)
         {
             var effectiveDate = notowanie.effectiveDate;
             foreach (var kurs in notowanie.rates)
@@ -56,24 +54,32 @@ namespace KodyPocztowe.Module.BusinessObjects
 
             }
         }
-    }
+
+        public static void WczytajKursy(List<Notowanie> res)
+        {
+            if (res != null)
+            {
+                using (XPObjectSpaceProvider directProvider = new XPObjectSpaceProvider(AppSettings.ConnectionString, null))
+                {
+                    using (IObjectSpace directObjectSpace = directProvider.CreateObjectSpace())
+                    {
+                        XafTypesInfo.Instance.RegisterEntity(typeof(KursWaluty));
+                        XafTypesInfo.Instance.RegisterEntity(typeof(Waluta));
+                    
+                        WczytajKursy(directObjectSpace,res);
+                        directObjectSpace.CommitChanges();
+
+                    }
+                }
+            }
+        }
 
 
-    public class Notowanie
-    {
-        public string table { get; set; }
-        public string no { get; set; }
-        public DateTime tradingDate { get; set; }
-        public DateTime effectiveDate { get; set; }
-        public Rate[] rates { get; set; }
+
     }
 
-    public class Rate
-    {
-        public string currency { get; set; }
-        public string code { get; set; }
-        public decimal bid { get; set; }
-        public decimal mid { get; set; }
-        public decimal ask { get; set; }
-    }
+   
+
+
+
 }

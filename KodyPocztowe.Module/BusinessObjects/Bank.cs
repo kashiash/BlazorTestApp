@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace KodyPocztowe.Module.BusinessObjects
+namespace KrajeWaluty.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [DefaultProperty(nameof(Symbol))]

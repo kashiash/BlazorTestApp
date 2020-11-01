@@ -1,5 +1,5 @@
 ﻿
-using KodyPocztowe.Module.Imports;
+using KrajeWaluty.Module.Imports;
 using System;
 
 namespace ImportkodyPocztowe

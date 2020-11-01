@@ -16,10 +16,10 @@ using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.ExpressApp.Xpo;
 
-namespace KrajeWaluty.Module {
+namespace KrajeWaluty {
     // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ModuleBase.
-    public sealed partial class KodyPocztoweModule : ModuleBase {
-        public KodyPocztoweModule() {
+    public sealed partial class KrajeWalutyModule : ModuleBase {
+        public KrajeWalutyModule() {
             InitializeComponent();
         }
         public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB) {
