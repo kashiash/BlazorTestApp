@@ -7,6 +7,9 @@ using System.Text.RegularExpressions;
 
     namespace kashiash.utils
     {
+
+
+
         public static class StringExt
         {
             public static string Truncate(this string value, int maxLength)

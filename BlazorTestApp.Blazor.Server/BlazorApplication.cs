@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using DevExpress.ExpressApp.Xpo;
 using BlazorTestApp.Blazor.Server.Services;
+using Common.Module.Utils;
 
 namespace BlazorTestApp.Blazor.Server {
     public partial class BlazorTestAppBlazorApplication : BlazorApplication {
@@ -16,17 +17,18 @@ namespace BlazorTestApp.Blazor.Server {
         }
         protected override void OnSetupStarted() {
             base.OnSetupStarted();
-            IConfiguration configuration = ServiceProvider.GetRequiredService<IConfiguration>();
-            if(configuration.GetConnectionString("ConnectionString") != null) {
-                ConnectionString = configuration.GetConnectionString("ConnectionString");
-            }
+            //IConfiguration configuration = ServiceProvider.GetRequiredService<IConfiguration>();
+            //if(configuration.GetConnectionString("ConnectionString") != null) {
+            //    ConnectionString = configuration.GetConnectionString("ConnectionString");
+            //}
+            ConnectionString = AppSettings.ConnectionString;
 #if EASYTEST
             if(configuration.GetConnectionString("EasyTestConnectionString") != null) {
                 ConnectionString = configuration.GetConnectionString("EasyTestConnectionString");
             }
 #endif
 #if DEBUG
-            if(System.Diagnostics.Debugger.IsAttached && CheckCompatibilityType == CheckCompatibilityType.DatabaseSchema) {
+            if (System.Diagnostics.Debugger.IsAttached && CheckCompatibilityType == CheckCompatibilityType.DatabaseSchema) {
                 DatabaseUpdateMode = DatabaseUpdateMode.UpdateDatabaseAlways;
             }
 #endif

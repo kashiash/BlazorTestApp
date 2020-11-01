@@ -32,7 +32,7 @@ namespace KodyPocztowe.Module.BusinessObjects
             foreach (var kurs in notowanie.rates)
             {
                 var waluta = directObjectSpace.GetObjectByKey<Waluta>(kurs.code);
-                Guard.ArgumentNotNull(waluta, "Brak waluty");
+                //  Guard.ArgumentNotNull(waluta, "Brak waluty");
                 if (waluta != null)
                 {
 
@@ -43,9 +43,14 @@ namespace KodyPocztowe.Module.BusinessObjects
                         kursWaluty.Waluta = waluta;
                         kursWaluty.DataKursu = effectiveDate;
                     }
+                    if (kurs.bid > 0)
+                        kursWaluty.KursSkupu = kurs.bid;
 
-                    kursWaluty.KursSkupu = kurs.bid;
-                    kursWaluty.KursSprzedazy = kurs.ask;
+                    if (kurs.mid > 0)
+                        kursWaluty.KursSredni = kurs.mid;
+
+                    if (kurs.ask > 0)
+                        kursWaluty.KursSprzedazy = kurs.ask;
                 }
 
 
@@ -68,6 +73,7 @@ namespace KodyPocztowe.Module.BusinessObjects
         public string currency { get; set; }
         public string code { get; set; }
         public decimal bid { get; set; }
+        public decimal mid { get; set; }
         public decimal ask { get; set; }
     }
 }
