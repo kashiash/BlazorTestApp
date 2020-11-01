@@ -1,4 +1,6 @@
-﻿namespace BlazorTestApp.Module {
+﻿using KodyPocztowe.Module;
+
+namespace BlazorTestApp.Module {
 	partial class BlazorTestAppModule {
 		/// <summary> 
 		/// Required designer variable.
@@ -40,6 +42,8 @@
 			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.ReportsV2.ReportsModuleV2));
 			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.Validation.ValidationModule));
 			this.RequiredModuleTypes.Add(typeof(DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule));
+
+			this.RequiredModuleTypes.Add(typeof(KodyPocztoweModule));
 		}
 
 		#endregion

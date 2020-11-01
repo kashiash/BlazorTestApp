@@ -9,6 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorTestApp.Module.Blazor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorTestApp.Blazor.Server", "BlazorTestApp.Blazor.Server\BlazorTestApp.Blazor.Server.csproj", "{E990BB57-7281-47F4-8D9B-263FD3CB378B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLibrary", "CommonLibrary\CommonLibrary.csproj", "{8A7F2420-D020-42C4-9758-19DD67FA3BEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PobierzWaluty", "PobierzWaluty\PobierzWaluty.csproj", "{B2C73A64-6954-4089-8584-E3D86175A8A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImportkodyPocztowe", "ImportkodyPocztowe\ImportkodyPocztowe.csproj", "{F6757D04-5481-43AC-AF22-FE66E52122BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KodyPocztowe.Module", "KodyPocztowe.Module\KodyPocztowe.Module.csproj", "{0D7F88F5-773A-4AFD-82D4-E5FBE1601A31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +42,30 @@ Global
 		{E990BB57-7281-47F4-8D9B-263FD3CB378B}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
 		{E990BB57-7281-47F4-8D9B-263FD3CB378B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E990BB57-7281-47F4-8D9B-263FD3CB378B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7F2420-D020-42C4-9758-19DD67FA3BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7F2420-D020-42C4-9758-19DD67FA3BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7F2420-D020-42C4-9758-19DD67FA3BEC}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7F2420-D020-42C4-9758-19DD67FA3BEC}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{8A7F2420-D020-42C4-9758-19DD67FA3BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7F2420-D020-42C4-9758-19DD67FA3BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C73A64-6954-4089-8584-E3D86175A8A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C73A64-6954-4089-8584-E3D86175A8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C73A64-6954-4089-8584-E3D86175A8A7}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C73A64-6954-4089-8584-E3D86175A8A7}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{B2C73A64-6954-4089-8584-E3D86175A8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C73A64-6954-4089-8584-E3D86175A8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6757D04-5481-43AC-AF22-FE66E52122BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6757D04-5481-43AC-AF22-FE66E52122BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6757D04-5481-43AC-AF22-FE66E52122BB}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{F6757D04-5481-43AC-AF22-FE66E52122BB}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{F6757D04-5481-43AC-AF22-FE66E52122BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6757D04-5481-43AC-AF22-FE66E52122BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D7F88F5-773A-4AFD-82D4-E5FBE1601A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D7F88F5-773A-4AFD-82D4-E5FBE1601A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D7F88F5-773A-4AFD-82D4-E5FBE1601A31}.EasyTest|Any CPU.ActiveCfg = EasyTest|Any CPU
+		{0D7F88F5-773A-4AFD-82D4-E5FBE1601A31}.EasyTest|Any CPU.Build.0 = EasyTest|Any CPU
+		{0D7F88F5-773A-4AFD-82D4-E5FBE1601A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D7F88F5-773A-4AFD-82D4-E5FBE1601A31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
